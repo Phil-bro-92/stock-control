@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  background-color: rgb(10, 72, 120);
   color: white;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  line-height: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.username {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 23, 23);
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  color: rgb(225, 212, 212);
+  padding: 10px;
+  border-radius: 60px;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.username > p {
+  margin: 0;
+}
+
+.login-box {
+  text-align: center;
+  display: grid;
+  gap: 5px;
+  background-color: aliceblue;
+  margin: 10%;
+  padding: 5%;
+}
+
+.login-box > form {
+  background-color: rgb(232, 237, 237);
+  border-radius: 5px;
+}
+
+.login-box > form > div > input {
+  display: block;
+  margin: 10px auto;
+  width: 70%;
+}
+
+.department-list > ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.department-list > ul > a > li {
+  margin: 3px;
+  border: 3px inset black;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.department-list > ul > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  text-shadow: 1px 1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff,
+    -1px -1px #ffffff;
+}
+
+.homepage-produce {
+  background-color: rgb(27, 231, 68);
+}
+.homepage-bakery {
+  background-color: rgb(200, 231, 27);
+}
+.homepage-dairy {
+  background-color: rgb(68, 102, 213);
+}
+.homepage-meats {
+  background-color: rgb(231, 68, 27);
+}
+.homepage-grocery {
+  background-color: rgb(153, 27, 231);
+}
+.homepage-alcohol {
+  background-color: rgb(228, 162, 19);
+}
+
+.produce-list {
+  display: grid;
+}
+
+.produce-item {
+  display: grid;
+  border: 1px solid black;
+  margin: 3px;
+  padding: 10px;
+}
+
+.produce-picture {
+  width: 100%;
 }

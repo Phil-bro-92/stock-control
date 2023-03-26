@@ -11,11 +11,16 @@ const createRouter = require("./helpers/create_router.js");
 MongoClient.connect("mongodb://127.0.0.1:27017", { useUnifiedTopology: true })
   .then((client) => {
     const db = client.db("stock_control");
+    const usersCollection = db.collection("users");
+    const usersRouter = createRouter(usersCollection);
+    app.use("/api/users", usersRouter);
     const produceCollection = db.collection("produce");
     const produceRouter = createRouter(produceCollection);
     app.use("/api/produce", produceRouter);
+    const bakeryCollection = db.collection("bakery");
+    const bakeryRouter = createRouter(bakeryCollection);
+    app.use("/api/bakery", bakeryRouter);
   })
-
   .catch(console.err);
 
 app.listen(9000, function () {
