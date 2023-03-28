@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import RegisterContainer from "./containers/RegisterContainer";
 import LoginContainer from "./containers/LoginContainer";
 import HomepageContainer from "./containers/HomepageContainer";
@@ -21,7 +21,7 @@ function App() {
   };
   return (
     <Router>
-      <Header username={username} />
+      <NavBar username={username} />
       <Routes>
         <Route
           path="/"

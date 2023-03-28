@@ -20,6 +20,18 @@ MongoClient.connect("mongodb://127.0.0.1:27017", { useUnifiedTopology: true })
     const bakeryCollection = db.collection("bakery");
     const bakeryRouter = createRouter(bakeryCollection);
     app.use("/api/bakery", bakeryRouter);
+    const dairyCollection = db.collection("dairy");
+    const dairyRouter = createRouter(dairyCollection);
+    app.use("/api/dairy", dairyRouter);
+    const meatsCollection = db.collection("meats");
+    const meatsRouter = createRouter(meatsCollection);
+    app.use("/api/meats", meatsRouter);
+    const groceryCollection = db.collection("grocery");
+    const groceryRouter = createRouter(groceryCollection);
+    app.use("/api/grocery", groceryRouter);
+    const alcoholCollection = db.collection("alcohol");
+    const alcoholRouter = createRouter(alcoholCollection);
+    app.use("/api/alcohol", alcoholRouter);
   })
   .catch(console.err);
 
